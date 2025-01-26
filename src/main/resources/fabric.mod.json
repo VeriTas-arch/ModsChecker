@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "loadedmodschecker",
+  "version": "${version}",
+  "name": "Loaded Mods Checker",
+  "description": "存档模组核对",
+  "authors": ["Phoupraw"],
+  "contact": {
+    "_homepage": "https://www.mcmod.cn/class/TODO.html",
+    "sources": "https://github.com/Phoupraw/LoadedModsChecker",
+    "issues": "https://github.com/Phoupraw/LoadedModsChecker/issues"
+  },
+  "entrypoints": {
+    "main": ["phoupraw.mcmod.loadedmodschecker.LoadedModsChecker"],
+    "client": ["phoupraw.mcmod.loadedmodschecker.LoadedModsCheckerClient"],
+    "fabric-datagen": ["phoupraw.mcmod.loadedmodschecker.datagen.LoadedModsCheckerDataGen"],
+    "modmenu": ["phoupraw.mcmod.loadedmodschecker.config.LoadedModsCheckerModMenuApi"]
+  },
+  "environment": "client",
+  "depends": {
+    "fabricloader": "*"
+  },
+  "recommends": {
+    "modmenu": "*"
+  },
+  "mixins": ["loadedmodschecker.mixins.json"],
+  "icon": "assets/loadedmodschecker/icon.png",
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/project/loadedmodschecker",
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/loadedmodschecker"
+      }
+    }
+  },
+  "license": "MPL-2.0",
+  "accessWidener": "loadedmodschecker.accessWidener"
+}
